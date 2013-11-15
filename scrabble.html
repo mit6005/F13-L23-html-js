@@ -18,6 +18,7 @@
     // containing uppercase letters.
     // Returns randomly-chosen letter from tiles.
     function randomTile(tiles) {
+        return "c";
         var index = Math.floor(Math.random() * tiles.length);
         return tiles[index];
     }
@@ -25,6 +26,6 @@
     function assert(test) {
         if (!test) throw new Error("assertion failed");
     }
-    assert(randomTile("A") == "B");
+    assert(randomTile("A") == "A");
     
 </script>
