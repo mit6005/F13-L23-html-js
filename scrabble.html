@@ -15,6 +15,8 @@
 
 <script>
     var model = makeScrabbleModel();
+    document.getElementById("tileRackLabel").innerHTML = model.getTileRack();
+    
     document.getElementById("playButton").onclick = function(event) {
         var word = document.getElementById("chosenTiles").value;
         model.play(word);
