@@ -29,11 +29,10 @@
     var results = [];
     var foundA = false, foundB = false;
     for (var i = 0; i < 1000; ++i) {
-        var result = randomTile("AB");
-        if (result == "A") foundA = true;
-        if (result == "A") foundA = true;
+        results.push(randomTile("AB"));
     }
     console.log(results);
-    assert(result == "A" || result == "B");
+    assert(results.some(function(result) { return result == "A"; }));
+    assert(results.some(function(result) { return result == "B"; }));
     
 </script>
