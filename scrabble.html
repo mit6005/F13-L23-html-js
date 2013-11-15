@@ -15,11 +15,17 @@
 
 <script>
     var model = makeScrabbleModel();
-    document.getElementById("tileRackLabel").innerHTML = model.getTileRack();
+    
+    function updateUI() {
+        document.getElementById("tileRackLabel").innerHTML = model.getTileRack();
+        document.getElementById("scoreLabel").innerHTML = model.getScore();
+    }
+    updateUI();
     
     document.getElementById("playButton").onclick = function(event) {
         var word = document.getElementById("chosenTiles").value;
         model.play(word);
+        updateUI();
     }; 
 
 </script>
