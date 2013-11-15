@@ -18,6 +18,7 @@
     // containing uppercase letters.
     // Returns randomly-chosen letter from tiles.
     function randomTile(tiles) {
+        return tiles[0];
         var index = Math.floor(Math.random() * tiles.length);
         return tiles[index];
     }
@@ -32,7 +33,9 @@
         results.push(randomTile("AB"));
     }
     console.log(results);
-    assert(results.some(function(result) { return result == "A" || result == "B"; }));
-    assert(results.some(function(result) { return result == "B"; }));
+    function is(letter) { 
+        return function(result) { return result == letter; };
+    }
+    assert(results.some(is("A")) && results.some(is("B")));
     
 </script>
