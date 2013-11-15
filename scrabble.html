@@ -24,6 +24,7 @@
     
     document.getElementById("playButton").onclick = function(event) {
         var word = document.getElementById("chosenTiles").value;
+        word = word.toUpperCase();
         model.play(word);
         updateUI();
     }; 
