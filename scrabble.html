@@ -21,4 +21,10 @@
         var index = Math.floor(Math.random() * tiles.length);
         return tiles[index];
     }
+    
+    function assert(test) {
+        if (!test) throw new Error("assertion failed");
+    }
+    assert(randomTile("A") == "B");
+    
 </script>
