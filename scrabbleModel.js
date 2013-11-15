@@ -32,7 +32,7 @@ function makeScrabbleModel() {
         for (var i = 0; i < 1000; ++i) {
             manyCalls.push(randomTile("ABC"));
         }
-        console.log(manyCalls);
+        //console.log(manyCalls);
         assert(manyCalls.some(function(result) { return result == "A" }));
         assert(manyCalls.some(function(result) { return result == "B" }));
         assert(manyCalls.some(function(result) { return result == "C" }));
