@@ -27,8 +27,11 @@
     }
     assert(randomTile("A") == "A");
     var results = [];
+    var foundA = false, foundB = false;
     for (var i = 0; i < 1000; ++i) {
-        results.push(randomTile("AB"));
+        var result = randomTile("AB");
+        if (result == "A") foundA = true;
+        if (result == "A") foundA = true;
     }
     console.log(results);
     assert(result == "A" || result == "B");
