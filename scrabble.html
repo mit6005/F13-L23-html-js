@@ -50,14 +50,16 @@
         } 
         
         // returns the player's score as integer
-        function getScore() {
+        object.getScore = function() {
             return score;
         }
         
         // modifies the rack by removing the letters in word,
         // and increase the player's score by the points in word
-        function play(word) {
+        object.play = function(word) {
         }
+        
+        return object;
     }
     
     
