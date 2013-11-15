@@ -5,6 +5,7 @@
 <div>
     <input type="text" id="chosenTiles">
     <button id="playButton">Play</button>
+    <button id="giveUpButton">Give Up</button>
 </div>
 
 <div>
@@ -28,5 +29,8 @@
         model.play(word);
         updateUI();
     }; 
+    document.getElementById("giveUpButton").onclick = function(event) {
+        document.location = "http://youtu.be/Rcav9fIkBjM"; 
+    };
 
 </script>
