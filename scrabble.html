@@ -26,7 +26,11 @@
         if (!test) throw new Error("assertion failed");
     }
     assert(randomTile("A") == "A");
-    var result = randomTile("AB");
+    var results = [];
+    for (var i = 0; i < 1000; ++i) {
+        results.push(randomTile("AB"));
+    }
+    console.log(results);
     assert(result == "A" || result == "B");
     
 </script>
