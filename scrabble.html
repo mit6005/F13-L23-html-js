@@ -26,6 +26,7 @@
         if (!test) throw new Error("assertion failed");
     }
     assert(randomTile("A") == "A");
-    
+    var result = randomTile("AB");
+    assert(result == "A" || result == "B");
     
 </script>
